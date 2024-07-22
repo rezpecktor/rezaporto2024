@@ -1,0 +1,674 @@
+:root {
+  --background: rgb(10, 25, 47);
+  --primary: rgb(100, 255, 218);
+  --secondary: #57cbff;
+  --text: #ccd6f6;
+  --accent: #ccd6f6b0;
+  --feature: #8892b0;
+  --alpha: 0.8;
+  --marginside: 10%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+/* font-family: 'Courier Prime', monospace; */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  background-color: var(--background);
+  color: var(--feature);
+}
+/* =================================== HEADER START ===================================*/
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px var(--marginside);
+  width: 100%;
+  background-color: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 100;
+}
+/* START ==== UBAH INI JIKA PAKE LOGO NONTEKS ===== */
+.logo {
+  width: 50px;
+  transition: 0.4s;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+}
+
+.logo:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--primary);
+  /* border-radius: 10px; */
+}
+/* END ==== UBAH INI JIKA PAKE LOGO NONTEKS ==== */
+
+/* .number {
+  color: var(--primary) !important;
+} */
+
+.navbar {
+  font-family: "Courier Prime", monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--secondary);
+}
+
+.navbar a {
+  font-size: 15px;
+  font-weight: 200;
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
+.active {
+  color: var(--primary) !important;
+}
+/* =================================== HEADER END ===================================*/
+.main {
+  margin-top: 50px;
+  padding: 20px var(--marginside);
+  /* height: 100vh; */
+}
+/* =================================== BIO START ===================================*/
+.container {
+  height: 60vh;
+}
+
+.bio {
+  color: var(--text);
+  width: 65%;
+}
+
+.hi {
+  font-size: 16px;
+  margin: 30px 0 0 10px;
+  font-family: "Courier Prime", monospace;
+  color: var(--primary);
+}
+
+.name {
+  margin-top: 30px;
+  width: 65%;
+  transition: 0.3s ease-in-out;
+  font-size: 60px;
+  background: linear-gradient(var(--primary), var(--secondary));
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+.name:hover {
+  transform: translate(-3px, -2px);
+  box-shadow: 3px 2px 0 var(--primary);
+  border-radius: 10px;
+}
+
+.love {
+  color: var(--accent);
+  font-size: 50px;
+}
+
+.more {
+  color: var(--accent);
+  margin-top: 30px;
+}
+
+.button {
+  padding: 10px;
+  margin: 50px 0 0 30px;
+  display: flex;
+  /* justify-content: space-evenly; */
+  gap: 1em;
+
+  /* height: 60px; */
+}
+.bio .button a {
+  height: 40px;
+  width: 40px;
+  border-radius: 30%;
+}
+
+.fa-brands {
+  font-size: 25px;
+}
+
+.button a {
+  font-family: "Courier Prime", monospace;
+
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+  height: 35px;
+
+  background-color: rgb(94, 234, 212);
+  border: 2px solid rgb(94, 234, 212);
+  border-radius: 8px;
+
+  font-size: 19px;
+  color: rgb(15, 23, 42);
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.button a:hover {
+  color: rgb(94, 234, 212);
+}
+
+.button a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(15, 23, 42);
+  z-index: -1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.button a:hover::before {
+  width: 100%;
+}
+
+/* =================================== BIO END ===================================*/
+
+/* =================================== CONTENT START ===================================*/
+
+.content {
+  padding-top: 100px;
+}
+
+.heading {
+  padding: 10px 0 0 10px;
+  font-size: 30px;
+  color: var(--text);
+  transition: 0.4s;
+  width: 100px;
+}
+
+.bio,
+.heading,
+.bullet {
+  cursor: default;
+}
+
+.heading::before {
+  content: "";
+  /* position: absolute;
+  bottom: 2px; */
+  margin: 0 15px 0 -30px;
+  border: 1px solid var(--feature);
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  right: -80px;
+  height: 1px;
+  width: 200%;
+  margin-left: 20px;
+  background-color: var(--feature);
+}
+
+.heading:hover {
+  color: var(--primary);
+  margin-left: 25px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  gap: 5em;
+}
+
+.detail {
+  width: 60%;
+  font-size: 20px;
+}
+
+.detail > p {
+  margin: 5px;
+  word-spacing: 1;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.highlight:nth-child(1) {
+  font-weight: 600;
+}
+
+.me {
+  height: 20em;
+  /* width: 20em; */
+  filter: grayscale(100%) contrast(1);
+  transition: 0.5s;
+  border-radius: 100%;
+  /* border: 2px solid crimson; */
+}
+
+.me:hover {
+  filter: none;
+  transform: translate(-8px, -6px);
+  border-radius: 0;
+  /* border: 2px solid var(--primary); */
+  /* box-shadow: 30px 30px var(--primary); */
+}
+
+.pic {
+  margin: 0;
+  padding: 10px;
+}
+
+.pic::before {
+  content: "";
+  position: absolute;
+
+  width: 20em;
+  height: 20em;
+  border-radius: 100%;
+  border: 2px solid var(--primary);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.pic:hover::before {
+  border: 2px solid var(--primary);
+  transform: translate(20px, 10px);
+}
+/* =================================== CONTENT END ===================================*/
+/* =================================== GALLERY START ===================================*/
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+  margin: 30px 0 0 0;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: var(--background);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.wrapper i:first-child {
+  left: -22px;
+  display: none;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+  margin-left: 0;
+}
+/* =================================== GALLERY END ===================================*/
+/* =================================== ACTIVITiES START ===================================*/
+
+#activities .heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  right: -110px;
+  height: 1px;
+  width: 170%;
+  margin-left: 20px;
+  background-color: var(--feature);
+}
+
+.bullet {
+  color: var(--text);
+}
+
+.activities-container .bullet::before {
+  content: "⩥ ";
+  color: var(--primary);
+  /* font-size: 12px; */
+  /* position: relative; */
+}
+
+.act {
+  margin-top: 20px;
+}
+/* =================================== ACTIVITiES END ===================================*/
+/* =================================== PROJECTS START ===================================*/
+
+#projects .heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  right: -110px;
+  height: 1px;
+  width: 170%;
+  margin-left: 20px;
+  background-color: var(--feature);
+}
+
+.all-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.all-projects .project {
+  width: 30%;
+  height: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  background-color: #112240;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.all-projects .project:hover {
+  box-shadow: 5px 5px 0 var(--primary);
+  transform: translate(-3px, -3px);
+}
+
+.title {
+  font-size: 20px;
+  color: var(--text);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-name {
+  font-size: 30px;
+  /* margin: 10px 10px 25px 10px; */
+  color: var(--text);
+}
+
+/* .project-desc {
+  margin-bottom: 90px;
+}
+.dua > .project-desc {
+  margin-bottom: 20px;
+}
+
+.empat > .project-desc {
+  margin-bottom: 70px;
+}
+
+.lima > .project-desc,
+.enam > .project-desc {
+  margin-bottom: 55px;
+} */
+
+.fa-folder {
+  color: var(--primary);
+}
+
+.fa-arrow-up-right-from-square,
+.git {
+  color: var(--accent);
+}
+
+/* =================================== PROJECTS END ===================================*/
+.year,
+.description {
+  padding: 5px 0 10px 30px;
+}
+
+/* =================================== CONTACTS START ===================================*/
+
+#contact .heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  right: -105px;
+  height: 1px;
+  width: 170%;
+  margin-left: 20px;
+  background-color: var(--feature);
+}
+
+.contact-container {
+  margin: 30px;
+  font-size: 40px;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-container p {
+  font-size: x-large;
+  color: var(--accent);
+  /* padding: 0 auto; */
+}
+
+.contact-text {
+  margin-top: 20px;
+  max-width: 70%;
+}
+
+/* =================================== CONTACTS END ===================================*/
+
+/* =================================== FOOTER START ===================================*/
+
+.footer {
+  margin-top: 50px;
+  padding: 20px var(--marginside);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(3px);
+  height: 5em;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.footer,
+.year {
+  font-family: "Courier Prime", monospace;
+}
+
+/* =================================== FOOTER END ===================================*/
+
+@media screen and (max-width: 1316px) {
+  .name {
+    width: 100%;
+    display: block;
+    /* text-align: center; */
+  }
+  .header,
+  .main {
+    padding: 20px 5%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .content-container {
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    /* display: flex; */
+    flex-direction: column;
+    background-color: var(--background);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-menu > .nav-item {
+    margin: 16px 0;
+    text-align: right;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .name,
+  .love,
+  .more {
+    width: 150%;
+  }
+
+  .detail {
+    width: 100%;
+  }
+}
+/* ======================== disini ================== */
+@media screen and (max-width: 770px) {
+  .all-projects .project {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 550px) {
+  .carousel img,
+  .contact-container .contact-text {
+    width: 100%;
+  }
+
+  .contact-container {
+    margin: 30px 0;
+  }
+}
